@@ -1,0 +1,38 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "requireConfigFile": false
+  },
+  "rules": {
+    "arrow-parens": ["error", "as-needed"],
+    "comma-dangle": "off",
+    "indent": ["error", "tab", { "SwitchCase": 1 }],
+    "linebreak-style": 0,
+    "no-console": ["error", { "allow": ["info", "warn", "error"] }],
+    "no-tabs": "off",
+    "react/prefer-es6-class": 0,
+    "react/jsx-indent": ["error", "tab"],
+    "react/jsx-indent-props": ["error", "tab"],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/no-unused-prop-types": [2, { "skipShapeProps": true }],
+    "react/react-in-jsx-scope": "off",
+    "react/forbid-prop-types": [0],
+    "react/require-extension": "off",
+    "semi": [2, "always"],
+    "space-before-function-paren": "off"
+  }
+}

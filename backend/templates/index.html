@@ -1,0 +1,13 @@
+{% load webpack_loader static %}
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Index</title>
+    {% stylesheet_pack 'app_react' %} {% javascript_pack 'app_react' attrs='defer' %}
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
