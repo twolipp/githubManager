@@ -1,5 +1,5 @@
 """
-URL configuration for backend project.
+URL configuration for githubManager project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -17,8 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
+from graphene_django.views import GraphQLView
+from api.views import helloRequest
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('', TemplateView.as_view(template_name="index.html")),  
+    path('graphql/', GraphQLView.as_view(graphiql=True)),
+    path('helloRequest/', helloRequest),
+    path('', TemplateView.as_view(template_name="index.html")), 
 ]
