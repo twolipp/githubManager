@@ -12,3 +12,7 @@ yarn-error.log
 .yarnclean
 .vscode
 .idea
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
