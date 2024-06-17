@@ -5,7 +5,10 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config frontend/webpack/webpack.config.prod.js",
     "start": "webpack serve --config frontend/webpack/webpack.config.dev.js",
-    "watch": "webpack --watch --config frontend/webpack/webpack.config.watch.js"
+    "watch": "webpack --watch --config frontend/webpack/webpack.config.watch.js",
+    "lint-es": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "lint": "yarn run lint-es",
+    "format": "yarn prettier --write ."
   },
   "keywords": [
     "webpack",
@@ -34,6 +37,7 @@
     "mini-css-extract-plugin": "^2.7.1",
     "postcss-loader": "^8.0.0",
     "postcss-preset-env": "^9.0.0",
+    "prettier": "3.3.2",
     "sass": "~1.69.5",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.1",
